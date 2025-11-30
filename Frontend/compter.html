@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computers & Laptops - ShopNow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="category-styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo"><a href="index.html">ShopwithGiddy</a></div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search computers, laptops...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-actions">
+                    <a href="#">
+                        <i class="fas fa-user"></i>
+                        <span><a href="signup.html">signup</a></span>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-question-circle"></i>
+                        <span><a href="login.html">login</a></span>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart</span>
+                    </a>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <div class="categories">
+                    <a href="index.html">All Categories</a>
+                    <a href="computer.html" class="active">Computers</a>
+                    <a href="phones.html">Phones & Tablets</a>
+                    <a href="#">Electronics</a>
+                    <a href="#">Home & Kitchen</a>
+                    <a href="#">Fashion</a>
+                    <a href="#">Health & Beauty</a>
+                </div>
+                <div class="deals">
+                    <a href="#">Super Deals!</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Category Header -->
+    <section class="category-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> > <span>Computers & Laptops</span>
+            </div>
+            <h1>Computers & Laptops</h1>
+            <p>Find the perfect computer for work, gaming, or everyday use</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Filters Sidebar -->
+        <div class="category-layout">
+            <aside class="filters-sidebar">
+                <h3>Filters</h3>
+                
+                <div class="filter-group">
+                    <h4>Category</h4>
+                    <label><input type="checkbox" checked> Laptops</label>
+                    <label><input type="checkbox"> Desktops</label>
+                    <label><input type="checkbox"> Monitors</label>
+                    <label><input type="checkbox"> Accessories</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Brand</h4>
+                    <label><input type="checkbox"> Dell</label>
+                    <label><input type="checkbox" checked> HP</label>
+                    <label><input type="checkbox"> Lenovo</label>
+                    <label><input type="checkbox"> Apple</label>
+                    <label><input type="checkbox"> Asus</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Price Range</h4>
+                    <label><input type="checkbox"> Under $500</label>
+                    <label><input type="checkbox" checked> $500 - $1000</label>
+                    <label><input type="checkbox"> $1000 - $1500</label>
+                    <label><input type="checkbox"> Over $1500</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>RAM</h4>
+                    <label><input type="checkbox"> 4GB</label>
+                    <label><input type="checkbox" checked> 8GB</label>
+                    <label><input type="checkbox"> 16GB</label>
+                    <label><input type="checkbox"> 32GB+</label>
+                </div>
+
+                <button class="apply-filters">Apply Filters</button>
+            </aside>
+
+            <!-- Products Grid -->
+            <main class="products-section">
+                <div class="products-header">
+                    <div class="sort-options">
+                        <select>
+                            <option>Sort by: Featured</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Customer Reviews</option>
+                            <option>Newest Arrivals</option>
+                        </select>
+                    </div>
+                    <div class="results-count">Showing 12 of 45 products</div>
+                </div>
+
+                <div class="products-grid">
+                    <!-- Computer Products -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Laptop">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Dell XPS 13 Laptop</h3>
+                            <div class="product-price">$1,199.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-count">(128)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>Intel Core i7</li>
+                                <li>16GB RAM</li>
+                                <li>512GB SSD</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Gaming Laptop">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">ASUS ROG Gaming Laptop</h3>
+                            <div class="product-price">$1,599.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="rating-count">(89)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>RTX 4060</li>
+                                <li>32GB RAM</li>
+                                <li>1TB SSD</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="MacBook">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Apple MacBook Pro 16"</h3>
+                            <div class="product-price">$2,399.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-count">(256)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>M2 Pro Chip</li>
+                                <li>16GB RAM</li>
+                                <li>1TB SSD</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Desktop">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">HP Pavilion Desktop</h3>
+                            <div class="product-price">$899.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-count">(67)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>Intel Core i5</li>
+                                <li>12GB RAM</li>
+                                <li>256GB SSD</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Add more computer products as needed -->
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <a href="#" class="page-link active">1</a>
+                    <a href="#" class="page-link">2</a>
+                    <a href="#" class="page-link">3</a>
+                    <a href="#" class="page-link">4</a>
+                    <a href="#" class="page-link">Next</a>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ShopNow</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Corporate Information</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Make Money with Us</h3>
+                    <ul>
+                        <li><a href="#">Sell on ShopNow</a></li>
+                        <li><a href="#">Become an Affiliate</a></li>
+                        <li><a href="#">Advertise Your Products</a></li>
+                        <li><a href="#">Fulfillment by ShopNow</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Payment Methods</h3>
+                    <ul>
+                        <li><a href="#">ShopNow Pay</a></li>
+                        <li><a href="#">Credit Card</a></li>
+                        <li><a href="#">Debit Card</a></li>
+                        <li><a href="#">Cash on Delivery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Let Us Help You</h3>
+                    <ul>
+                        <li><a href="#">Your Account</a></li>
+                        <li><a href="#">Your Orders</a></li>
+                        <li><a href="#">Shipping Rates & Policies</a></li>
+                        <li><a href="#">Returns & Replacements</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 ShopNow. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

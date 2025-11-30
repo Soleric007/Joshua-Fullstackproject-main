@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Beauty - ShopNow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo"><a href="index.html">ShopwithGiddy/a></div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search health, beauty products...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-actions">
+                    <a href="#">
+                        <i class="fas fa-user"></i>
+                        <span>signup <a href="signup.html"></a></span>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-question-circle"></i>
+                        <span>login <a href="login.html"></a></span>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart</span>
+                    </a>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <div class="categories">
+                    <a href="index.html">All Categories</a>
+                    <a href="computer.html">Computers</a>
+                    <a href="phones.html">Phones & Tablets</a>
+                    <a href="electronic.html">Electronics</a>
+                    <a href="Home&kitchen.html">Home & Kitchen</a>
+                    <a href="Fashion.html">Fashion</a>
+                    <a href="Health&beauty.html" class="active">Health & Beauty</a>
+                </div>
+                <div class="deals">
+                    <a href="#">Super Deals!</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Category Header -->
+    <section class="category-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> > <span>Health & Beauty</span>
+            </div>
+            <h1>Health & Beauty</h1>
+            <p>Skincare, makeup, wellness products and more</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Filters Sidebar -->
+        <div class="category-layout">
+            <aside class="filters-sidebar">
+                <h3>Filters</h3>
+                
+                <div class="filter-group">
+                    <h4>Category</h4>
+                    <label><input type="checkbox" checked> Skincare</label>
+                    <label><input type="checkbox"> Makeup</label>
+                    <label><input type="checkbox"> Hair Care</label>
+                    <label><input type="checkbox"> Fragrance</label>
+                    <label><input type="checkbox"> Wellness</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Brand</h4>
+                    <label><input type="checkbox"> L'Oreal</label>
+                    <label><input type="checkbox" checked> Neutrogena</label>
+                    <label><input type="checkbox"> Olay</label>
+                    <label><input type="checkbox"> Maybelline</label>
+                    <label><input type="checkbox"> The Ordinary</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Price Range</h4>
+                    <label><input type="checkbox"> Under $20</label>
+                    <label><input type="checkbox" checked> $20 - $50</label>
+                    <label><input type="checkbox"> $50 - $100</label>
+                    <label><input type="checkbox"> Over $100</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Skin Type</h4>
+                    <label><input type="checkbox"> Normal</label>
+                    <label><input type="checkbox"> Dry</label>
+                    <label><input type="checkbox" checked> Oily</label>
+                    <label><input type="checkbox"> Combination</label>
+                    <label><input type="checkbox"> Sensitive</label>
+                </div>
+
+                <button class="apply-filters">Apply Filters</button>
+            </aside>
+
+            <!-- Products Grid -->
+            <main class="products-section">
+                <div class="products-header">
+                    <div class="sort-options">
+                        <select>
+                            <option>Sort by: Featured</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Customer Reviews</option>
+                            <option>Newest Arrivals</option>
+                        </select>
+                    </div>
+                    <div class="results-count">Showing 12 of 203 products</div>
+                </div>
+
+                <div class="products-grid">
+                    <!-- Health & Beauty Products -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Moisturizer">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Neutrogena Hydro Boost Gel</h3>
+                            <div class="product-price">$24.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="rating-count">(1,234)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>Oil-Free</li>
+                                <li>Hyaluronic Acid</li>
+                                <li>Non-Comedogenic</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Foundation">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">L'Oreal True Match Foundation</h3>
+                            <div class="product-price">$14.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-count">(987)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>30 Shades Available</li>
+                                <li>SPF 17</li>
+                                <li>Oil-Free</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Shampoo">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">OGX Coconut Milk Shampoo</h3>
+                            <div class="product-price">$8.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-count">(1,567)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>For Damaged Hair</li>
+                                <li>Sulfate-Free</li>
+                                <li>13.6 fl oz</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1617897903246-719242758050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Perfume">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Chanel Coco Mademoiselle</h3>
+                            <div class="product-price">$135.00</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="rating-count">(456)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>Eau de Parfum</li>
+                                <li>3.4 fl oz</li>
+                                <li>Floral Oriental</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1594736797933-d0ea3ff8db41?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Toothbrush">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Oral-B Electric Toothbrush</h3>
+                            <div class="product-price">$49.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-count">(678)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>3D Cleaning Action</li>
+                                <li>Pressure Sensor</li>
+                                <li>Multiple Brush Heads</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1594736797933-d0ea3ff8db41?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Vitamins">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Nature Made Vitamin D3</h3>
+                            <div class="product-price">$12.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="rating-count">(2,345)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>2000 IU</li>
+                                <li>300 Softgels</li>
+                                <li>USP Verified</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <a href="#" class="page-link active">1</a>
+                    <a href="#" class="page-link">2</a>
+                    <a href="#" class="page-link">3</a>
+                    <a href="#" class="page-link">4</a>
+                    <a href="#" class="page-link">Next</a>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ShopNow</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Corporate Information</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Make Money with Us</h3>
+                    <ul>
+                        <li><a href="#">Sell on ShopNow</a></li>
+                        <li><a href="#">Become an Affiliate</a></li>
+                        <li><a href="#">Advertise Your Products</a></li>
+                        <li><a href="#">Fulfillment by ShopNow</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Payment Methods</h3>
+                    <ul>
+                        <li><a href="#">ShopNow Pay</a></li>
+                        <li><a href="#">Credit Card</a></li>
+                        <li><a href="#">Debit Card</a></li>
+                        <li><a href="#">Cash on Delivery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Let Us Help You</h3>
+                    <ul>
+                        <li><a href="#">Your Account</a></li>
+                        <li><a href="#">Your Orders</a></li>
+                        <li><a href="#">Shipping Rates & Policies</a></li>
+                        <li><a href="#">Returns & Replacements</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 ShopNow. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

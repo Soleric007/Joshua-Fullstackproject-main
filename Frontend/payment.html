@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Jumia Style Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .payment-method {
+            transition: all 0.3s ease;
+        }
+        .payment-method:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .payment-method.selected {
+            border-color: #3b82f6;
+            background-color: #eff6ff;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-orange-500 text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-3">
+                    <a href="index.html" class="flex items-center space-x-3 hover:opacity-80 transition">
+                        <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                            <i class="fas fa-shopping-bag text-orange-500 text-xl"></i>
+                        </div>
+                        <span class="text-xl font-bold">JumiaStyle</span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="cart.html" class="hover:text-orange-200 transition">
+                        <i class="fas fa-shopping-cart"></i>
+                        Cart
+                    </a>
+                    <span id="userName" class="text-white"></span>
+                    <button id="logoutBtn" class="bg-white text-orange-500 px-4 py-2 rounded-lg hover:bg-gray-100 transition">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-6xl mx-auto px-4 py-8">
+        <!-- Progress Steps -->
+        <div class="flex justify-center mb-8">
+            <div class="flex items-center space-x-4">
+                <div class="flex items-center">
+                    <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <span class="ml-2 font-medium">Cart</span>
+                </div>
+                <div class="w-16 h-1 bg-green-500"></div>
+                <div class="flex items-center">
+                    <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <span class="ml-2 font-medium">Shipping</span>
+                </div>
+                <div class="w-16 h-1 bg-green-500"></div>
+                <div class="flex items-center">
+                    <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+                        3
+                    </div>
+                    <span class="ml-2 font-medium text-blue-500">Payment</span>
+                </div>
+                <div class="w-16 h-1 bg-gray-300"></div>
+                <div class="flex items-center">
+                    <div class="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center text-gray-500 font-bold">
+                        4
+                    </div>
+                    <span class="ml-2 font-medium text-gray-500">Confirmation</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Payment Form -->
+            <div class="lg:col-span-2">
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Payment Method</h2>
+
+                    <!-- Alert Messages -->
+                    <div id="alert" class="hidden p-4 rounded-lg mb-6"></div>
+
+                    <!-- Payment Methods -->
+                    <div class="space-y-4 mb-6">
+                        <!-- Credit/Debit Card -->
+                        <div class="payment-method border-2 border-gray-300 rounded-xl p-4 cursor-pointer selected" data-method="card">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                        <i class="fas fa-credit-card text-blue-600 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-800">Credit/Debit Card</div>
+                                        <div class="text-sm text-gray-600">Pay with Visa, Mastercard, or Verve</div>
+                                    </div>
+                                </div>
+                                <div class="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-check text-white text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bank Transfer -->
+                        <div class="payment-method border-2 border-gray-300 rounded-xl p-4 cursor-pointer" data-method="transfer">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                        <i class="fas fa-university text-green-600 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-800">Bank Transfer</div>
+                                        <div class="text-sm text-gray-600">Direct bank transfer</div>
+                                    </div>
+                                </div>
+                                <div class="w-5 h-5 border-2 border-gray-300 rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Money -->
+                        <div class="payment-method border-2 border-gray-300 rounded-xl p-4 cursor-pointer" data-method="mobile">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                                        <i class="fas fa-mobile-alt text-purple-600 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-800">Mobile Money</div>
+                                        <div class="text-sm text-gray-600">MTN, Airtel, Orange Money</div>
+                                    </div>
+                                </div>
+                                <div class="w-5 h-5 border-2 border-gray-300 rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <!-- Pay on Delivery -->
+                        <div class="payment-method border-2 border-gray-300 rounded-xl p-4 cursor-pointer" data-method="delivery">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
+                                        <i class="fas fa-truck text-orange-600 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-800">Pay on Delivery</div>
+                                        <div class="text-sm text-gray-600">Cash payment when you receive items</div>
+                                    </div>
+                                </div>
+                                <div class="w-5 h-5 border-2 border-gray-300 rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Payment Form (Default) -->
+                    <div id="cardForm" class="payment-form">
+                        <form id="paymentForm">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="cardNumber" class="block text-sm font-medium text-gray-700 mb-2">Card Number</label>
+                                    <div class="relative">
+                                        <input type="text" id="cardNumber" maxlength="19" required
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                                               placeholder="1234 5678 9012 3456">
+                                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                                            <div class="flex space-x-2">
+                                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCA0MCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjI0IiByeD0iMiIgZmlsbD0iIzAwMDBGRiIvPgo8L3N2Zz4K" class="w-8 h-5" alt="Visa">
+                                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCA0MCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjI0IiByeD0iMiIgZmlsbD0iI0Y3OTMxQiIvPgo8L3N2Zz4K" class="w-8 h-5" alt="Mastercard">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="cardName" class="block text-sm font-medium text-gray-700 mb-2">Name on Card</label>
+                                    <input type="text" id="cardName" required
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                                           placeholder="John Doe">
+                                </div>
+
+                                <div>
+                                    <label for="expiryDate" class="block text-sm font-medium text-gray-700 mb-2">Expiry Date</label>
+                                    <input type="text" id="expiryDate" maxlength="5" required
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                                           placeholder="MM/YY">
+                                </div>
+
+                                <div>
+                                    <label for="cvv" class="block text-sm font-medium text-gray-700 mb-2">CVV</label>
+                                    <div class="relative">
+                                        <input type="text" id="cvv" maxlength="3" required
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                                               placeholder="123">
+                                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                                            <i class="fas fa-question-circle text-gray-400 cursor-help" title="3-digit code on back of card"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Save Card Option -->
+                            <div class="flex items-center mt-6 mb-6">
+                                <input type="checkbox" id="saveCard" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                                <label for="saveCard" class="ml-2 text-sm text-gray-600">
+                                    Save card for future payments
+                                </label>
+                            </div>
+
+                            <!-- Billing Address -->
+                            <div class="border-t pt-6">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-4">Billing Address</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="md:col-span-2">
+                                        <label for="address" class="block text-sm font-medium text-gray-700 mb-2">Street Address</label>
+                                        <input type="text" id="address" required
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                                               placeholder="123 Main Street">
+                                    </div>
+                                    <div>
+                                        <label for="city" class="block text-sm font-medium text-gray-700 mb-2">City</label>
+                                        <input type="text" id="city" required
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                                               placeholder="Lagos">
+                                    </div>
+                                    <div>
+                                        <label for="state" class="block text-sm font-medium text-gray-700 mb-2">State</label>
+                                        <input type="text" id="state" required
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                                               placeholder="Lagos State">
+                                    </div>
+                                    <div>
+                                        <label for="zipCode" class="block text-sm font-medium text-gray-700 mb-2">ZIP Code</label>
+                                        <input type="text" id="zipCode" required
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                                               placeholder="100001">
+                                    </div>
+                                    <div>
+                                        <label for="country" class="block text-sm font-medium text-gray-700 mb-2">Country</label>
+                                        <select id="country" required
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
+                                            <option value="">Select Country</option>
+                                            <option value="nigeria" selected>Nigeria</option>
+                                            <option value="ghana">Ghana</option>
+                                            <option value="kenya">Kenya</option>
+                                            <option value="south-africa">South Africa</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" id="submitBtn" 
+                                    class="w-full bg-orange-500 text-white py-4 rounded-lg font-semibold hover:bg-orange-600 transition duration-300 flex items-center justify-center mt-6">
+                                <span>Complete Payment - $245.99</span>
+                                <i class="fas fa-lock ml-2"></i>
+                            </button>
+
+                            <div id="loading" class="hidden text-center mt-4">
+                                <div class="inline-block animate-spin rounded-full h-6 w-6 border-b-2 border-orange-600"></div>
+                                <span class="ml-2 text-gray-600">Processing payment...</span>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Other Payment Methods (Hidden by Default) -->
+                    <div id="otherForms" class="hidden space-y-6">
+                        <!-- Each payment method would have its own form -->
+                        <div class="text-center py-8">
+                            <i class="fas fa-credit-card text-4xl text-gray-300 mb-4"></i>
+                            <p class="text-gray-600">Select a payment method to continue</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="space-y-6">
+                <!-- Order Details -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Order Summary</h3>
+                    
+                    <!-- Shipping Address -->
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-gray-700 mb-2">Shipping to:</h4>
+                        <p class="text-sm text-gray-600">
+                            John Doe<br>
+                            123 Main Street<br>
+                            Lagos, Lagos State 100001<br>
+                            Nigeria<br>
+                            📞 +234 812 345 6789
+                        </p>
+                    </div>
+
+                    <!-- Items -->
+                    <div class="space-y-4 mb-6">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-3">
+                                <img src="https://via.placeholder.com/60x60" alt="Product" class="w-12 h-12 rounded-lg object-cover">
+                                <div>
+                                    <div class="font-medium text-sm">iPhone 14 Pro</div>
+                                    <div class="text-xs text-gray-500">Qty: 1</div>
+                                </div>
+                            </div>
+                            <div class="font-semibold">$999.00</div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-3">
+                                <img src="https://via.placeholder.com/60x60" alt="Product" class="w-12 h-12 rounded-lg object-cover">
+                                <div>
+                                    <div class="font-medium text-sm">AirPods Pro</div>
+                                    <div class="text-xs text-gray-500">Qty: 1</div>
+                                </div>
+                            </div>
+                            <div class="font-semibold">$249.00</div>
+                        </div>
+                    </div>
+
+                    <!-- Price Breakdown -->
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Subtotal:</span>
+                            <span>$1,248.00</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Shipping:</span>
+                            <span>$15.99</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Tax:</span>
+                            <span>$112.32</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Discount:</span>
+                            <span class="text-green-500">-$130.32</span>
+                        </div>
+                        <div class="border-t pt-2">
+                            <div class="flex justify-between text-lg font-bold">
+                                <span>Total:</span>
+                                <span>$1,245.99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security Badge -->
+                <div class="bg-green-50 border border-green-200 rounded-2xl p-6">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-shield-alt text-green-600 text-xl mr-3"></i>
+                        <h3 class="font-bold text-green-800">Secure Payment</h3>
+                    </div>
+                    <ul class="text-green-700 text-sm space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-lock mr-2"></i>
+                            <span>256-bit SSL encryption</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-user-shield mr-2"></i>
+                            <span>PCI DSS compliant</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            <span>Money-back guarantee</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="bg-blue-50 border border-blue-200 rounded-2xl p-6">
+                    <h3 class="font-bold text-blue-800 mb-3">Need Help?</h3>
+                    <div class="space-y-2 text-blue-700 text-sm">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone mr-2"></i>
+                            <span>+234 700 123 4567</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>support@jumiastyle.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span>24/7 Support Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Check authentication
+        const token = localStorage.getItem('token');
+        const user = JSON.parse(localStorage.getItem('user') || '{}');
+
+        if (!token) {
+            window.location.href = 'login.html';
+        }
+
+        document.getElementById('userName').textContent = `Hello, ${user.name || 'Customer'}`;
+        
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            window.location.href = 'login.html';
+        });
+
+        // Payment method selection
+        document.querySelectorAll('.payment-method').forEach(method => {
+            method.addEventListener('click', function() {
+                // Remove selected class from all methods
+                document.querySelectorAll('.payment-method').forEach(m => {
+                    m.classList.remove('selected');
+                    m.querySelector('.fa-check').parentElement.className = 'w-5 h-5 border-2 border-gray-300 rounded-full';
+                });
+
+                // Add selected class to clicked method
+                this.classList.add('selected');
+                this.querySelector('.w-5').className = 'w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center';
+                
+                const methodType = this.getAttribute('data-method');
+                showPaymentForm(methodType);
+            });
+        });
+
+        function showPaymentForm(methodType) {
+            const cardForm = document.getElementById('cardForm');
+            const otherForms = document.getElementById('otherForms');
+
+            if (methodType === 'card') {
+                cardForm.style.display = 'block';
+                otherForms.style.display = 'none';
+            } else {
+                cardForm.style.display = 'none';
+                otherForms.style.display = 'block';
+                // Here you would show forms for other payment methods
+                otherForms.innerHTML = `
+                    <div class="text-center py-8">
+                        <i class="fas fa-${getMethodIcon(methodType)} text-4xl text-gray-300 mb-4"></i>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">${getMethodTitle(methodType)}</h4>
+                        <p class="text-gray-600">${getMethodDescription(methodType)}</p>
+                        <button type="button" class="mt-4 bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition">
+                            Continue with ${getMethodTitle(methodType)}
+                        </button>
+                    </div>
+                `;
+            }
+        }
+
+        function getMethodIcon(methodType) {
+            const icons = {
+                'transfer': 'university',
+                'mobile': 'mobile-alt',
+                'delivery': 'truck'
+            };
+            return icons[methodType] || 'credit-card';
+        }
+
+        function getMethodTitle(methodType) {
+            const titles = {
+                'transfer': 'Bank Transfer',
+                'mobile': 'Mobile Money',
+                'delivery': 'Pay on Delivery'
+            };
+            return titles[methodType] || 'Credit Card';
+        }
+
+        function getMethodDescription(methodType) {
+            const descriptions = {
+                'transfer': 'You will be redirected to your bank for secure payment',
+                'mobile': 'Enter your mobile money details to complete payment',
+                'delivery': 'Pay with cash when your order is delivered'
+            };
+            return descriptions[methodType] || 'Enter your card details to complete payment';
+        }
+
+        // Card number formatting
+        document.getElementById('cardNumber').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+            let matches = value.match(/\d{4,16}/g);
+            let match = matches && matches[0] || '';
+            let parts = [];
+            
+            for (let i = 0; i < match.length; i += 4) {
+                parts.push(match.substring(i, i + 4));
+            }
+            
+            if (parts.length) {
+                e.target.value = parts.join(' ');
+            } else {
+                e.target.value = value;
+            }
+        });
+
+        // Expiry date formatting
+        document.getElementById('expiryDate').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 2) {
+                e.target.value = value.substring(0, 2) + '/' + value.substring(2, 4);
+            }
+        });
+
+        // Form submission
+        document.getElementById('paymentForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const loadingDiv = document.getElementById('loading');
+
+            // Show loading state
+            submitBtn.disabled = true;
+            loadingDiv.classList.remove('hidden');
+            submitBtn.querySelector('span').textContent = 'Processing...';
+
+            // Simulate payment processing
+            setTimeout(() => {
+                // In real app, this would call your backend API
+                alert('Payment processed successfully! Redirecting to order confirmation...');
+                window.location.href = 'order-confirmation.html';
+            }, 2000);
+        });
+
+        // Initialize
+        showPaymentForm('card');
+    </script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics - ShopNow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo"><a href="index.html">ShopwithGiddy/a></div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search electronics, gadgets...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-actions">
+                    <a href="#">
+                        <i class="fas fa-user"></i>
+                        <span><a href="signup.html">signup</a></span>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-question-circle"></i>
+                        <span><a href="login.html">login</a></span>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart</span>
+                    </a>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <div class="categories">
+                    <a href="index.html">All Categories</a>
+                    <a href="computer.html">Computers</a>
+                    <a href="phones.html">Phones & Tablets</a>
+                    <a href="electronic.html" class="active">Electronics</a>
+                    <a href="Home&kitchen.html">Home & Kitchen</a>
+                    <a href="Fashion.html">Fashion</a>
+                    <a href="Health&beauty.html">Health & Beauty</a>
+                </div>
+                <div class="deals">
+                    <a href="#">Super Deals!</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Category Header -->
+    <section class="category-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> > <span>Electronics</span>
+            </div>
+            <h1>Electronics</h1>
+            <p>Latest gadgets, TVs, audio equipment and more</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Filters Sidebar -->
+        <div class="category-layout">
+            <aside class="filters-sidebar">
+                <h3>Filters</h3>
+                
+                <div class="filter-group">
+                    <h4>Category</h4>
+                    <label><input type="checkbox" checked> Televisions</label>
+                    <label><input type="checkbox"> Audio & Sound</label>
+                    <label><input type="checkbox"> Cameras</label>
+                    <label><input type="checkbox"> Smart Home</label>
+                    <label><input type="checkbox"> Gaming</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Brand</h4>
+                    <label><input type="checkbox"> Sony</label>
+                    <label><input type="checkbox" checked> Samsung</label>
+                    <label><input type="checkbox"> LG</label>
+                    <label><input type="checkbox"> Panasonic</label>
+                    <label><input type="checkbox"> Bose</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Price Range</h4>
+                    <label><input type="checkbox"> Under $100</label>
+                    <label><input type="checkbox" checked> $100 - $500</label>
+                    <label><input type="checkbox"> $500 - $1000</label>
+                    <label><input type="checkbox"> Over $1000</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Features</h4>
+                    <label><input type="checkbox"> Smart TV</label>
+                    <label><input type="checkbox"> 4K Ultra HD</label>
+                    <label><input type="checkbox"> Wireless</label>
+                    <label><input type="checkbox"> Bluetooth</label>
+                </div>
+
+                <button class="apply-filters">Apply Filters</button>
+            </aside>
+
+            <!-- Products Grid -->
+            <main class="products-section">
+                <div class="products-header">
+                    <div class="sort-options">
+                        <select>
+                            <option>Sort by: Featured</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Customer Reviews</option>
+                            <option>Newest Arrivals</option>
+                        </select>
+                    </div>
+                    <div class="results-count">Showing 12 of 67 products</div>
+                </div>
+
+                <div class="products-grid">
+                    <!-- Electronics Products -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Smart TV">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Samsung 55" 4K Smart TV</h3>
+                            <div class="product-price">$699.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="rating-count">(234)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>4K Ultra HD</li>
+                                <li>Smart TV</li>
+                                <li>HDR</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Headphones">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Sony WH-1000XM4 Headphones</h3>
+                            <div class="product-price">$349.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-count">(189)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>Noise Canceling</li>
+                                <li>30hr Battery</li>
+                                <li>Wireless</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Camera">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Canon EOS R5 Mirrorless Camera</h3>
+                            <div class="product-price">$3,899.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="rating-count">(67)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>45MP Full Frame</li>
+                                <li>8K Video</li>
+                                <li>IBIS</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1558089687-db4b18efa0c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Speaker">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Bose SoundLink Revolve+</h3>
+                            <div class="product-price">$299.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-count">(145)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>360° Sound</li>
+                                <li>16hr Battery</li>
+                                <li>Water Resistant</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1593113630400-ea4288922497?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Gaming Console">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">PlayStation 5 Console</h3>
+                            <div class="product-price">$499.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-count">(512)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>4K Gaming</li>
+                                <li>825GB SSD</li>
+                                <li>Ray Tracing</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25856cd23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Smart Watch">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Samsung Galaxy Watch 5</h3>
+                            <div class="product-price">$279.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-count">(198)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>Health Monitoring</li>
+                                <li>GPS</li>
+                                <li>40mm</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <a href="#" class="page-link active">1</a>
+                    <a href="#" class="page-link">2</a>
+                    <a href="#" class="page-link">3</a>
+                    <a href="#" class="page-link">4</a>
+                    <a href="#" class="page-link">Next</a>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ShopNow</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Corporate Information</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Make Money with Us</h3>
+                    <ul>
+                        <li><a href="#">Sell on ShopNow</a></li>
+                        <li><a href="#">Become an Affiliate</a></li>
+                        <li><a href="#">Advertise Your Products</a></li>
+                        <li><a href="#">Fulfillment by ShopNow</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Payment Methods</h3>
+                    <ul>
+                        <li><a href="#">ShopNow Pay</a></li>
+                        <li><a href="#">Credit Card</a></li>
+                        <li><a href="#">Debit Card</a></li>
+                        <li><a href="#">Cash on Delivery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Let Us Help You</h3>
+                    <ul>
+                        <li><a href="#">Your Account</a></li>
+                        <li><a href="#">Your Orders</a></li>
+                        <li><a href="#">Shipping Rates & Policies</a></li>
+                        <li><a href="#">Returns & Replacements</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 ShopNow. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

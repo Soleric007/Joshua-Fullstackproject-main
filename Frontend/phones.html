@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phones & Tablets - ShopwithGiddy/title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="category-styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo"><a href="index.html">ShopwithGiddy</a></div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search phones, tablets...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-actions">
+                    <a href="#">
+                        <i class="fas fa-user"></i>
+                        <span>signup <a href="signup.html"></a></span>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-question-circle"></i>
+                        <span>login <a href="login.html"></a></span>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart</span>
+                    </a>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <div class="categories">
+                    <a href="index.html">All Categories</a>
+                    <a href="computer.html">Computers</a>
+                    <a href="phones.html" class="active">Phones & Tablets</a>
+                    <a href="#">Electronics</a>
+                    <a href="#">Home & Kitchen</a>
+                    <a href="#">Fashion</a>
+                    <a href="#">Health & Beauty</a>
+                </div>
+                <div class="deals">
+                    <a href="#">Super Deals!</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Category Header -->
+    <section class="category-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> > <span>Phones & Tablets</span>
+            </div>
+            <h1>Phones & Tablets</h1>
+            <p>Latest smartphones, tablets, and accessories</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Filters Sidebar -->
+        <div class="category-layout">
+            <aside class="filters-sidebar">
+                <h3>Filters</h3>
+                
+                <div class="filter-group">
+                    <h4>Category</h4>
+                    <label><input type="checkbox" checked> Smartphones</label>
+                    <label><input type="checkbox"> Tablets</label>
+                    <label><input type="checkbox"> Accessories</label>
+                    <label><input type="checkbox"> Smartwatches</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Brand</h4>
+                    <label><input type="checkbox"> Apple</label>
+                    <label><input type="checkbox" checked> Samsung</label>
+                    <label><input type="checkbox"> Google</label>
+                    <label><input type="checkbox"> Xiaomi</label>
+                    <label><input type="checkbox"> OnePlus</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Price Range</h4>
+                    <label><input type="checkbox"> Under $200</label>
+                    <label><input type="checkbox" checked> $200 - $500</label>
+                    <label><input type="checkbox"> $500 - $800</label>
+                    <label><input type="checkbox"> Over $800</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Storage</h4>
+                    <label><input type="checkbox"> 64GB</label>
+                    <label><input type="checkbox" checked> 128GB</label>
+                    <label><input type="checkbox"> 256GB</label>
+                    <label><input type="checkbox"> 512GB+</label>
+                </div>
+
+                <button class="apply-filters">Apply Filters</button>
+            </aside>
+
+            <!-- Products Grid -->
+            <main class="products-section">
+                <div class="products-header">
+                    <div class="sort-options">
+                        <select>
+                            <option>Sort by: Featured</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Customer Reviews</option>
+                            <option>Newest Arrivals</option>
+                        </select>
+                    </div>
+                    <div class="results-count">Showing 12 of 38 products</div>
+                </div>
+
+                <div class="products-grid">
+                    <!-- Phone Products -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1598327105854-c8674faddf74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Smartphone">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Samsung Galaxy S21 Ultra 5G</h3>
+                            <div class="product-price">$899.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="rating-count">(342)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>6.8" Display</li>
+                                <li>128GB Storage</li>
+                                <li>5G Ready</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="iPhone">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Apple iPhone 14 Pro</h3>
+                            <div class="product-price">$999.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-count">(512)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>Dynamic Island</li>
+                                <li>128GB Storage</li>
+                                <li>48MP Camera</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1605236453806-6ff36851218e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Tablet">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">iPad Air 10.9-inch</h3>
+                            <div class="product-price">$599.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-count">(289)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>M1 Chip</li>
+                                <li>64GB Storage</li>
+                                <li>10.9" Display</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Android Phone">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Google Pixel 7 Pro</h3>
+                            <div class="product-price">$899.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-count">(156)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>Tensor G2</li>
+                                <li>128GB Storage</li>
+                                <li>5x Telephoto</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Add more phone products as needed -->
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <a href="#" class="page-link active">1</a>
+                    <a href="#" class="page-link">2</a>
+                    <a href="#" class="page-link">3</a>
+                    <a href="#" class="page-link">4</a>
+                    <a href="#" class="page-link">Next</a>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ShopNow</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Corporate Information</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Make Money with Us</h3>
+                    <ul>
+                        <li><a href="#">Sell on ShopNow</a></li>
+                        <li><a href="#">Become an Affiliate</a></li>
+                        <li><a href="#">Advertise Your Products</a></li>
+                        <li><a href="#">Fulfillment by ShopNow</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Payment Methods</h3>
+                    <ul>
+                        <li><a href="#">ShopNow Pay</a></li>
+                        <li><a href="#">Credit Card</a></li>
+                        <li><a href="#">Debit Card</a></li>
+                        <li><a href="#">Cash on Delivery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Let Us Help You</h3>
+                    <ul>
+                        <li><a href="#">Your Account</a></li>
+                        <li><a href="#">Your Orders</a></li>
+                        <li><a href="#">Shipping Rates & Policies</a></li>
+                        <li><a href="#">Returns & Replacements</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 ShopNow. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

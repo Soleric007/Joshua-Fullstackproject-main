@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home & Kitchen - ShopNow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo"><a href="index.html">ShopwithGiddy</a></div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search home, kitchen items...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-actions">
+                    <a href="#">
+                        <i class="fas fa-user"></i>
+                        <span>signup <a href="signup.html"></a></span>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-question-circle"></i>
+                        <span>login <a href="login.html"></a></span>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart</span>
+                    </a>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <div class="categories">
+                    <a href="index.html">All Categories</a>
+                    <a href="computer.html">Computers</a>
+                    <a href="phones.html">Phones & Tablets</a>
+                    <a href="electronic.html">Electronics</a>
+                    <a href="Home&kitchen.html" class="active">Home & Kitchen</a>
+                    <a href="Fashion.html">Fashion</a>
+                    <a href="Health&beauty.html">Health & Beauty</a>
+                </div>
+                <div class="deals">
+                    <a href="#">Super Deals!</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Category Header -->
+    <section class="category-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> > <span>Home & Kitchen</span>
+            </div>
+            <h1>Home & Kitchen</h1>
+            <p>Everything you need for your home and kitchen</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Filters Sidebar -->
+        <div class="category-layout">
+            <aside class="filters-sidebar">
+                <h3>Filters</h3>
+                
+                <div class="filter-group">
+                    <h4>Category</h4>
+                    <label><input type="checkbox" checked> Kitchen Appliances</label>
+                    <label><input type="checkbox"> Home Decor</label>
+                    <label><input type="checkbox"> Furniture</label>
+                    <label><input type="checkbox"> Bed & Bath</label>
+                    <label><input type="checkbox"> Cleaning</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Brand</h4>
+                    <label><input type="checkbox"> KitchenAid</label>
+                    <label><input type="checkbox" checked> Instant Pot</label>
+                    <label><input type="checkbox"> Ninja</label>
+                    <label><input type="checkbox"> Philips</label>
+                    <label><input type="checkbox"> IKEA</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Price Range</h4>
+                    <label><input type="checkbox"> Under $50</label>
+                    <label><input type="checkbox" checked> $50 - $200</label>
+                    <label><input type="checkbox"> $200 - $500</label>
+                    <label><input type="checkbox"> Over $500</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Features</h4>
+                    <label><input type="checkbox"> Smart Home</label>
+                    <label><input type="checkbox"> Energy Saving</label>
+                    <label><input type="checkbox"> Non-Stick</label>
+                    <label><input type="checkbox"> Cordless</label>
+                </div>
+
+                <button class="apply-filters">Apply Filters</button>
+            </aside>
+
+            <!-- Products Grid -->
+            <main class="products-section">
+                <div class="products-header">
+                    <div class="sort-options">
+                        <select>
+                            <option>Sort by: Featured</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Customer Reviews</option>
+                            <option>Newest Arrivals</option>
+                        </select>
+                    </div>
+                    <div class="results-count">Showing 12 of 89 products</div>
+                </div>
+
+                <div class="products-grid">
+                    <!-- Home & Kitchen Products -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1581093458791-8a0a1ae43d62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Air Fryer">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Instant Vortex Plus Air Fryer</h3>
+                            <div class="product-price">$129.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="rating-count">(456)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>7-in-1 functionality</li>
+                                <li>6QT Capacity</li>
+                                <li>EvenCrisp Technology</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Coffee Maker">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Ninja Specialty Coffee Maker</h3>
+                            <div class="product-price">$199.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-count">(312)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>10-Cup Capacity</li>
+                                <li>Built-in Frother</li>
+                                <li>4 Brew Styles</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Blender">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Vitamix Professional Series Blender</h3>
+                            <div class="product-price">$449.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="rating-count">(189)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>64oz Container</li>
+                                <li>Professional Grade</li>
+                                <li>10-Year Warranty</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Robot Vacuum">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Roomba i7+ Robot Vacuum</h3>
+                            <div class="product-price">$799.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-count">(267)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>Self-Emptying Base</li>
+                                <li>Smart Mapping</li>
+                                <li>Voice Control</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Sofa">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Modern Fabric Sofa</h3>
+                            <div class="product-price">$899.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="rating-count">(134)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>3-Seater</li>
+                                <li>Modern Design</li>
+                                <li>Easy Assembly</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Cookware Set">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Non-Stick Cookware Set</h3>
+                            <div class="product-price">$249.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-count">(178)</span>
+                            </div>
+                            <ul class="product-features">
+                                <li>10-Piece Set</li>
+                                <li>Ceramic Coating</li>
+                                <li>Oven Safe</li>
+                            </ul>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <a href="#" class="page-link active">1</a>
+                    <a href="#" class="page-link">2</a>
+                    <a href="#" class="page-link">3</a>
+                    <a href="#" class="page-link">4</a>
+                    <a href="#" class="page-link">Next</a>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ShopNow</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Corporate Information</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Make Money with Us</h3>
+                    <ul>
+                        <li><a href="#">Sell on ShopNow</a></li>
+                        <li><a href="#">Become an Affiliate</a></li>
+                        <li><a href="#">Advertise Your Products</a></li>
+                        <li><a href="#">Fulfillment by ShopNow</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Payment Methods</h3>
+                    <ul>
+                        <li><a href="#">ShopNow Pay</a></li>
+                        <li><a href="#">Credit Card</a></li>
+                        <li><a href="#">Debit Card</a></li>
+                        <li><a href="#">Cash on Delivery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Let Us Help You</h3>
+                    <ul>
+                        <li><a href="#">Your Account</a></li>
+                        <li><a href="#">Your Orders</a></li>
+                        <li><a href="#">Shipping Rates & Policies</a></li>
+                        <li><a href="#">Returns & Replacements</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 ShopNow. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
